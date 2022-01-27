@@ -1,0 +1,229 @@
+.promo-webinar {
+	background: $green;
+
+	@include media-breakpoint-down($md) {
+		background: $green url('../img/promo-bg--mob.png');
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: auto 100%;
+	}
+}
+
+.promo-webinar__wrap {
+	position: relative;
+	padding: 205px 0 235px;
+
+	@include media-breakpoint-down($xl) {
+		padding: 180px 0;
+	}
+
+	@include media-breakpoint-down($md) {
+		display: none;
+	}
+}
+
+.promo-webinar__wrap--mob {
+	position: relative;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px 0;
+
+	@include media-breakpoint-down($md) {
+		display: flex;
+	}
+}
+
+.promo-webinar__content {
+	position: relative;
+	z-index: 1;
+}
+
+.promo-webinar__content--mob {
+	position: absolute;
+	left: 0;
+	bottom: -210px;
+	border-radius: 5px;
+	padding: 30px 20px;
+	background-color: $white;
+	box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.promo-webinar__img {
+	position: absolute;
+	bottom: 120px;
+	right: -100px;
+
+	@include media-breakpoint-down($xxl) {
+		right: -130px;
+	}
+
+	@include media-breakpoint-down($xl) {
+		width: 500px;
+		right: -50px;
+	}
+
+	@include media-breakpoint-down($lg) {
+		width: 400px;
+		right: -50px;
+		bottom: 150px;
+	}
+
+	@include media-breakpoint-down($md) {
+		width: 320px;
+		right: 50%;
+		bottom: 120px;
+		transform: translateX(50%);
+	}
+
+	@include media-breakpoint-down($sm) {
+		width: 280px;
+	}
+}
+
+.promo-webinar__title {
+	font-family: $font-Gilroy-semibold;
+	font-size: 50px;
+	line-height: 60px;
+	color: $white;
+	margin: 0;
+
+	@include media-breakpoint-down($xl) {
+		font-size: 36px;
+		line-height: 38px;
+	}
+
+	@include media-breakpoint-down($md) {
+		font-size: 24px;
+		line-height: 29px;
+	}
+}
+
+.promo-webinar__text {
+	font-family: $font-Proxima-regular;
+	font-size: 18px;
+	line-height: 22px;
+	color: rgba($white, 0.64);
+	margin: 20px 0 44px;
+
+	@include media-breakpoint-down($xl) {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	@include media-breakpoint-down($md) {
+		font-size: 14px;
+		line-height: 17px;
+		margin: 13px 0 265px;
+	}
+}
+
+.promo-webinar__button {
+	padding: 12px 95px 14px;
+}
+
+.host-webinar {
+	padding: 125px 0 185px;
+
+	@include media-breakpoint-down($xl) {
+		padding: 90px 0 150px;
+	}
+
+	@include media-breakpoint-down($md) {
+		padding: 250px 0 90px;
+	}
+}
+
+.host-webinar-title {
+	text-align: center !important;
+}
+
+.card-webinar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 85px;
+}
+
+.card-webinar__img {
+	@include media-breakpoint-down($md) {
+		width: 80px;
+	}
+}
+
+.card-webinar__title {
+	font-family: $font-Gilroy-semibold;
+	font-size: 24px;
+	line-height: 29px;
+	margin: 65px 0 14px;
+
+	@include media-breakpoint-down($md) {
+		font-size: 15px;
+		line-height: 18px;
+		margin: 35px 0 12px;
+	}
+}
+
+.card-webinar__text {
+	font-family: $font-Proxima-regular;
+	font-size: 14px;
+	line-height: 21px;
+	color: #929292;
+	margin: 0;
+
+	@include media-breakpoint-down($md) {
+		font-size: 12px;
+		line-height: 18px;
+	}
+}
+
+.questios-webinar {
+	padding: 85px 0;
+	background: url('../img/questions-bg.png');
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: cover;
+
+	@include media-breakpoint-down($md) {
+		padding: 60px 0 90px;
+	}
+}
+
+.questios-webinar-title {
+	text-align: center !important;
+}
+
+.questios-webinar__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
+	text-align: center;
+}
+
+.questios-webinar__list {
+	list-style: none;
+	padding-left: 0;
+	margin-bottom: 50px;
+}
+
+.questios-webinar__item {
+	&:not(:last-of-type) {
+		margin-bottom: 25px;
+	}
+}
+
+.questios-webinar__question {
+	font-family: $font-Gilroy-semibold;
+	font-size: 16px;
+	line-height: 18px;
+	color: #777777;
+	text-transform: uppercase;
+	margin: 0;
+
+	@include media-breakpoint-down($md) {
+		font-size: 12px;
+		line-height: 14px;
+	}
+}
