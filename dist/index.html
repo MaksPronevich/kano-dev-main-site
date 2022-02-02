@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" class="no-js">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Webinar page</title>
+	<title>Main-page</title>
 	<link as="font" crossorigin href="./fonts/proxima/regular/ProximaNova-Regular.woff" rel="preload" type="font/woff" />
 	<link as="font" crossorigin href="./fonts/gilroy/semibold/Gilroy-SemiBold.woff" rel="preload" type="font/woff" />
 	<link as="font" crossorigin href="./fonts/proxima/semibold/ProximaNova-Semibold.woff" rel="preload" type="font/woff" />
@@ -14,60 +14,272 @@
 </head>
 
 <body>
-	<div class="wrapper">
-		<section class="promo-webinar">
-			<div class="container">
-				<div class="promo-webinar__wrap">
-					<div class="promo-webinar__content">
-						<h2 class="promo-webinar__title"> Бесплатная запись вебинара<br /> “Всё о дентальной имплантации” </h2>
-						<p class="promo-webinar__text">Ведущий специалист KANO расскажет вам о всех тонкостях имплантации</p>
-						<button class="button promo-webinar__button">Смотреть</button>
-					</div>
-					<img src="img/promo-img.png" class="promo-webinar__img" alt="Вебинар" />
-				</div>
-				<div class="promo-webinar__wrap--mob">
-					<img src="img/promo-img--mob.png" alt="" />
-					<div class="promo-webinar__content--mob">
-						<span class="promo__title">Стоматология KANO. Качество и компетентность.</span>
-						<button class="button promo__button" data-fancybox="" data-src="#consultation-form">Бесплатная консультация</button>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="host-webinar">
-			<div class="container">
-				<h2 class="title host-webinar-title">Ведущий вебинара</h2>
-				<div class="card-webinar">
-					<img src="img/card-photo.png" class="card-webinar__img" alt="Шелег Владимир Леонидович" />
-					<h3 class="card-webinar__title">Шелег Владимир Леонидович</h3>
-					<p class="card-webinar__text"> ведущий имплантолого Беларуси,<br /> лектор, автор исследовательской работы по имплантации All-On-4/6 </p>
-				</div>
-			</div>
-		</section>
-		<section class="questios-webinar">
-			<div class="container">
-				<h2 class="title questios-webinar-title">Вопросы которые мы разберем на вебинаре:</h2>
-				<div class="questios-webinar__content">
-					<ul class="questios-webinar__list">
-						<li class="questios-webinar__item">
-							<h4 class="questios-webinar__question">Имплантация - это больно? Как подготовиться к имплантации?</h4>
-						</li>
-						<li class="questios-webinar__item">
-							<h4 class="questios-webinar__question">Какие импланты выбрать, почему такая разница в стоимости?</h4>
-						</li>
-						<li class="questios-webinar__item">
-							<h4 class="questios-webinar__question">Жизнь до и после имплантации - рекомендации по образу жизни?</h4>
-						</li>
-						<li class="questios-webinar__item">
-							<h4 class="questios-webinar__question">Что такое комплексная имплантация? В каких случаях необходима?</h4>
-						</li>
-					</ul>
-					<button class="button promo-webinar__button">Смотреть</button>
-				</div>
-			</div>
-		</section>
-	</div>
-	<script src="js/index.js"></script>
+	<svg style="display: none">
+		<symbol id="arrow-menu" viewBox="0 0 9 5">
+			<path fill="currentColor" d="M4.49952 5C4.32574 5 4.15292 4.93611 4.02063 4.80834L0.198437 1.11674C-0.0661458 0.861188 -0.0661458 0.447213 0.198437 0.191663C0.46302 -0.063887 0.891623 -0.063887 1.15621 0.191663L4.49952 3.42073L7.84379 0.191663C8.10923 -0.0647154 8.53784 -0.0630586 8.80156 0.191663C9.06614 0.447213 9.06614 0.861188 8.80156 1.11674L4.9784 4.80834C4.84611 4.93611 4.6733 5 4.49952 5Z"></path>
+		</symbol>
+		<symbol id="arrow-link" viewBox="0 0 5 9">
+			<path fill="currentColor" d="M5 4.50048C5 4.67426 4.93611 4.84708 4.80834 4.97937L1.11674 8.80156C0.861188 9.06615 0.447213 9.06615 0.191663 8.80156C-0.063887 8.53698 -0.063887 8.10838 0.191663 7.84379L3.42073 4.50048L0.191663 1.15621C-0.0647157 0.890766 -0.063059 0.462163 0.191663 0.198438C0.447213 -0.066145 0.861187 -0.066145 1.11674 0.198438L4.80834 4.0216C4.93611 4.15389 5 4.3267 5 4.50048Z"></path>
+		</symbol>
+		<symbol id="close" viewBox="0 0 17 17">
+			<path fill="currentColor" d="M10.2,8.5L16.7,2c0.4-0.4,0.4-1.2,0-1.7c-0.4-0.4-1.2-0.4-1.7,0L8.5,6.8L2,0.3c-0.4-0.4-1.2-0.4-1.7,0
+  c-0.4,0.4-0.4,1.2,0,1.7l6.5,6.5L0.3,15c-0.4,0.4-0.4,1.2,0,1.7C0.5,16.9,0.9,17,1.2,17s0.6-0.1,0.9-0.3l6.5-6.5l6.5,6.5
+  c0.2,0.2,0.5,0.3,0.9,0.3c0.3,0,0.6-0.1,0.9-0.3c0.4-0.4,0.4-1.2,0-1.7L10.2,8.5z"></path>
+		</symbol>
+		<symbol id="play" viewBox="0 0 28 28">
+			<path d="M14 1.4C20.9477 1.4 26.6 7.05227 26.6 14C26.6 20.9477 20.9477 26.6 14 26.6C7.05227 26.6 1.4 20.9477 1.4 14C1.4 7.05227 7.05227 1.4 14 1.4ZM14 0C6.26873 0 0 6.26827 0 14C0 21.7317 6.26873 28 14 28C21.7313 28 28 21.7317 28 14C28 6.26827 21.7313 0 14 0Z" fill="currentColor" />
+			<path d="M19.5947 12.481L12.1402 7.57494C10.8536 6.72841 9.80078 7.29634 9.80078 8.83634V19.1613C9.80078 20.7013 10.855 21.2711 12.1439 20.4279L19.5914 15.554C20.8799 14.7098 20.8813 13.3275 19.5947 12.481ZM18.6012 14.5245L11.9815 18.8566C11.5522 19.138 11.2008 18.9481 11.2008 18.4347V9.56247C11.2008 9.04914 11.5517 8.86014 11.9806 9.14247L18.6026 13.5002C19.0314 13.7821 19.031 14.2431 18.6012 14.5245Z" fill="currentColor" />
+		</symbol>
+	</svg>
+	<div class="wrapper is-mainpage">
+		<!-- <body>
+		<div class="wrapper"></div>
+
+		<link rel="stylesheet" property="stylesheet" href="/assets/css/components.css" />
+
+<script>
+	!(function (t) {
+		'use strict';
+		t.loadCSS || (t.loadCSS = function () {});
+		var e = (loadCSS.relpreload = {});
+		if (
+			((e.support = (function () {
+				var e;
+				try {
+					e = t.document.createElement('link').relList.supports('preload');
+				} catch (t) {
+					e = !1;
+				}
+				return function () {
+					return e;
+				};
+			})()),
+			(e.bindMediaToggle = function (t) {
+				var e = t.media || 'all';
+				function a() {
+					t.addEventListener ? t.removeEventListener('load', a) : t.attachEvent && t.detachEvent('onload', a),
+						t.setAttribute('onload', null),
+						(t.media = e);
+				}
+				t.addEventListener ? t.addEventListener('load', a) : t.attachEvent && t.attachEvent('onload', a),
+					setTimeout(function () {
+						(t.rel = 'stylesheet'), (t.media = 'only x');
+					}),
+					setTimeout(a, 3e3);
+			}),
+			(e.poly = function () {
+				if (!e.support())
+					for (var a = t.document.getElementsByTagName('link'), n = 0; n < a.length; n++) {
+						var o = a[n];
+						'preload' !== o.rel ||
+							'style' !== o.getAttribute('as') ||
+							o.getAttribute('data-loadcss') ||
+							(o.setAttribute('data-loadcss', !0), e.bindMediaToggle(o));
+					}
+			}),
+			!e.support())
+		) {
+			e.poly();
+			var a = t.setInterval(e.poly, 500);
+			t.addEventListener
+				? t.addEventListener('load', function () {
+						e.poly(), t.clearInterval(a);
+				  })
+				: t.attachEvent &&
+				  t.attachEvent('onload', function () {
+						e.poly(), t.clearInterval(a);
+				  });
+		}
+		'undefined' != typeof exports ? (exports.loadCSS = loadCSS) : (t.loadCSS = loadCSS);
+	})('undefined' != typeof global ? global : this);
+</script>
+
+<script src="./files/lozad.min.js"></script>
+<script src="./files/jquery-3.4.1.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+	integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.js"
+	integrity="sha512-Re9cWc8hkn7aWsPHHlX+FusmIyrNeKQy17imsq9KxIPauDx1XGnBhJn7+ItWi7fwT35i+81pDJGQtolFwnUXZg=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+></script>
+
+<script>
+	window.onRoistatAllModulesLoaded = function () {
+		window.roistat.registerOnVisitProcessedCallback(function () {
+			$('input[name="roistat__visit"]').val(window.roistat.getVisit());
+			//console.log(window.roistat.getVisit());
+		});
+	};
+</script>
+
+<script src="./files/plugins.min.js" defer></script>
+
+<script src="js/index.js"></script>
+
+<script async src="//app.call-tracking.by/scripts/calltracking.js?234d6ea0-931c-401c-88fa-b3aa4d77f5b2"></script>
+
+<script>
+	$(document).on('af_complete', function (event, response) {
+		if (response.success) {
+			dataLayer.push({ event: 'Lead' });
+			ym(32775105, 'reachGoal', 'lead');
+		}
+	});
+</script>
+
+<!-- BEGIN JIVOSITE CODE {literal} -->
+		<script type="text/javascript">
+			(function() {
+				document.jivositeloaded = 0;
+				var widget_id = 'bHRZDxQpBO';
+				var d = document;
+				var w = window;
+
+				function l() {
+					var s = d.createElement('script');
+					s.type = 'text/javascript';
+					s.async = true;
+					s.src = '//code.jivosite.com/script/widget/' + widget_id;
+					var ss = document.getElementsByTagName('script')[0];
+					ss.parentNode.insertBefore(s, ss);
+				} //эта строка обычная для кода JivoSite
+				function zy() {
+					//удаляем EventListeners
+					if (w.detachEvent) {
+						//поддержка IE8
+						w.detachEvent('onscroll', zy);
+						w.detachEvent('onmousemove', zy);
+						w.detachEvent('ontouchmove', zy);
+						w.detachEvent('onresize', zy);
+					} else {
+						w.removeEventListener('scroll', zy, false);
+						w.removeEventListener('mousemove', zy, false);
+						w.removeEventListener('touchmove', zy, false);
+						w.removeEventListener('resize', zy, false);
+					}
+					//запускаем функцию загрузки JivoSite
+					if (d.readyState == 'complete') {
+						l();
+					} else {
+						if (w.attachEvent) {
+							w.attachEvent('onload', l);
+						} else {
+							w.addEventListener('load', l, false);
+						}
+					}
+					//Устанавливаем куку по которой отличаем первый и второй хит
+					var cookie_date = new Date();
+					cookie_date.setTime(cookie_date.getTime() + 60 * 60 * 28 * 1000); //24 часа для Москвы
+					d.cookie = 'JivoSiteLoaded=1;path=/;expires=' + cookie_date.toGMTString();
+				}
+				if (d.cookie.search('JivoSiteLoaded') < 0) {
+					//проверяем, первый ли это визит на наш сайт, если да, то назначаем EventListeners на события прокрутки, изменения размера окна браузера и скроллинга на ПК и мобильных устройствах, для отложенной загрузке JivoSite.
+					if (w.attachEvent) {
+						// поддержка IE8
+						w.attachEvent('onscroll', zy);
+						w.attachEvent('onmousemove', zy);
+						w.attachEvent('ontouchmove', zy);
+						w.attachEvent('onresize', zy);
+					} else {
+						w.addEventListener('scroll', zy, {
+							capture: false,
+							passive: true
+						});
+						w.addEventListener('mousemove', zy, {
+							capture: false,
+							passive: true
+						});
+						w.addEventListener('touchmove', zy, {
+							capture: false,
+							passive: true
+						});
+						w.addEventListener('resize', zy, {
+							capture: false,
+							passive: true
+						});
+					}
+				} else {
+					zy();
+				}
+			})();
+		</script>
+		<!-- {/literal} END JIVOSITE CODE -->
 </body>
+
+</html> --> [[$uphead]] [[$header]] <div id="promo_section"></div> [[$services_section]] [[$features_section]] [[$tourism_section]] <div id="reviews_section"></div> [[$clinics_section]] [[$works_section]] [[$consultation_section]] [[$blog_section]] [[*content:ne=``:then=` <div class="section bordered">
+	<div class="container">
+		<div class="row align-justify">
+			<div class="columns small-12 large-8">
+				<div class="output">[[*content]]</div>
+			</div>
+			<div class="columns small-12 large-3">
+				<div class="note">
+					<span class="note__title">[[*title_right]]</span>
+					<p class="note__message">[[*text_right]]</p>
+					<div class="note__holder">
+						<a href="[[~[[%113:babelid]]]]" target="_blank" class="note__icon"><img class="lozad" data-src="assets/svg/iso.svg" alt="" /></a>
+						<a href="[[~[[%748:babelid]]]]" target="_blank" class="note__icon"><img class="lozad" data-src="assets/img/numberone.png" alt="" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> `]] [[$footer]] </div> [[$modals]] <script>
+	setTimeout(() => {
+		fetch('[[~965]]').then(response => {
+			return response.text();
+		}).then(data => {
+			$('#promo_section').html(data);
+			$('.js-promo').slick({
+				infinite: true,
+				dots: true,
+				arrows: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				appendArrows: '.promo__arrows',
+				appendDots: '.promo__dots',
+				responsive: [{
+					breakpoint: 1340,
+					settings: {
+						arrows: false,
+					},
+				}, ],
+			});
+		}).catch(err => console.log(err));
+		fetch('[[~966]]').then(response => {
+			return response.text();
+		}).then(data => {
+			$('#reviews_section').html(data);
+			$('.js-carousel').slick({
+				infinite: false,
+				dots: false,
+				arrows: true,
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				responsive: [{
+					breakpoint: 999,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						variableWidth: true,
+						infinite: false,
+						arrows: false,
+					},
+				}, ],
+			});
+			$('.blockquotes__item').on('click', function(e) {
+				$(this).addClass('current').siblings('.blockquotes__item').removeClass('current');
+				$('.blockquotes__message').eq($(this).index()).fadeIn().siblings('.blockquotes__message').hide();
+			});
+		});
+	}, 0);
+</script> [[$js]] </body>
 
 </html>

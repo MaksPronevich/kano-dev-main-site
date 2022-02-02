@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Webinar page</title>
+	<link as="font" crossorigin href="./fonts/proxima/regular/ProximaNova-Regular.woff" rel="preload" type="font/woff" />
+	<link as="font" crossorigin href="./fonts/gilroy/semibold/Gilroy-SemiBold.woff" rel="preload" type="font/woff" />
+	<link as="font" crossorigin href="./fonts/proxima/semibold/ProximaNova-Semibold.woff" rel="preload" type="font/woff" />
+	<link rel="preload" href="./files/plugins.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<section class="promo-webinar">
+			<div class="container">
+				<div class="promo-webinar__wrap">
+					<div class="promo-webinar__content">
+						<h2 class="promo-webinar__title"> Бесплатная запись вебинара<br /> “Всё о дентальной имплантации” </h2>
+						<p class="promo-webinar__text">Ведущий специалист KANO расскажет вам о всех тонкостях имплантации</p>
+						<button class="button promo-webinar__button">Смотреть</button>
+					</div>
+					<img src="img/promo-img.png" class="promo-webinar__img" alt="Вебинар" />
+				</div>
+				<div class="promo-webinar__wrap--mob">
+					<img src="img/promo-img--mob.png" alt="" />
+					<div class="promo-webinar__content--mob">
+						<span class="promo__title">Стоматология KANO. Качество и компетентность.</span>
+						<button class="button promo__button" data-fancybox="" data-src="#consultation-form">Бесплатная консультация</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="host-webinar">
+			<div class="container">
+				<h2 class="title host-webinar-title">Ведущий вебинара</h2>
+				<div class="card-webinar">
+					<img src="img/card-photo.png" class="card-webinar__img" alt="Шелег Владимир Леонидович" />
+					<h3 class="card-webinar__title">Шелег Владимир Леонидович</h3>
+					<p class="card-webinar__text"> ведущий имплантолого Беларуси,<br /> лектор, автор исследовательской работы по имплантации All-On-4/6 </p>
+				</div>
+			</div>
+		</section>
+		<section class="questios-webinar">
+			<div class="container">
+				<h2 class="title questios-webinar-title">Вопросы которые мы разберем на вебинаре:</h2>
+				<div class="questios-webinar__content">
+					<ul class="questios-webinar__list">
+						<li class="questios-webinar__item">
+							<h4 class="questios-webinar__question">Имплантация - это больно? Как подготовиться к имплантации?</h4>
+						</li>
+						<li class="questios-webinar__item">
+							<h4 class="questios-webinar__question">Какие импланты выбрать, почему такая разница в стоимости?</h4>
+						</li>
+						<li class="questios-webinar__item">
+							<h4 class="questios-webinar__question">Жизнь до и после имплантации - рекомендации по образу жизни?</h4>
+						</li>
+						<li class="questios-webinar__item">
+							<h4 class="questios-webinar__question">Что такое комплексная имплантация? В каких случаях необходима?</h4>
+						</li>
+					</ul>
+					<button class="button promo-webinar__button">Смотреть</button>
+				</div>
+			</div>
+		</section>
+	</div>
+	<link rel="stylesheet" property="stylesheet" href="/assets/css/components.css" />
+	<script>
+		!(function(t) {
+			'use strict';
+			t.loadCSS || (t.loadCSS = function() {});
+			var e = (loadCSS.relpreload = {});
+			if (
+				((e.support = (function() {
+						var e;
+						try {
+							e = t.document.createElement('link').relList.supports('preload');
+						} catch (t) {
+							e = !1;
+						}
+						return function() {
+							return e;
+						};
+					})()),
+					(e.bindMediaToggle = function(t) {
+						var e = t.media || 'all';
+
+						function a() {
+							t.addEventListener ? t.removeEventListener('load', a) : t.attachEvent && t.detachEvent('onload', a),
+								t.setAttribute('onload', null),
+								(t.media = e);
+						}
+						t.addEventListener ? t.addEventListener('load', a) : t.attachEvent && t.attachEvent('onload', a),
+							setTimeout(function() {
+								(t.rel = 'stylesheet'), (t.media = 'only x');
+							}),
+							setTimeout(a, 3e3);
+					}),
+					(e.poly = function() {
+						if (!e.support())
+							for (var a = t.document.getElementsByTagName('link'), n = 0; n < a.length; n++) {
+								var o = a[n];
+								'preload' !== o.rel || 'style' !== o.getAttribute('as') || o.getAttribute('data-loadcss') || (o.setAttribute('data-loadcss', !0), e.bindMediaToggle(o));
+							}
+					}), !e.support())) {
+				e.poly();
+				var a = t.setInterval(e.poly, 500);
+				t.addEventListener ? t.addEventListener('load', function() {
+					e.poly(), t.clearInterval(a);
+				}) : t.attachEvent && t.attachEvent('onload', function() {
+					e.poly(), t.clearInterval(a);
+				});
+			}
+			'undefined' != typeof exports ? (exports.loadCSS = loadCSS) : (t.loadCSS = loadCSS);
+		})('undefined' != typeof global ? global : this);
+	</script>
+	<script src="./files/lozad.min.js"></script>
+	<script src="./files/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.js" integrity="sha512-Re9cWc8hkn7aWsPHHlX+FusmIyrNeKQy17imsq9KxIPauDx1XGnBhJn7+ItWi7fwT35i+81pDJGQtolFwnUXZg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		window.onRoistatAllModulesLoaded = function() {
+			window.roistat.registerOnVisitProcessedCallback(function() {
+				$('input[name="roistat__visit"]').val(window.roistat.getVisit());
+				//console.log(window.roistat.getVisit());
+			});
+		};
+	</script>
+	<script src="./files/plugins.min.js" defer></script>
+	<script src="js/index.js"></script>
+	<script async src="//app.call-tracking.by/scripts/calltracking.js?234d6ea0-931c-401c-88fa-b3aa4d77f5b2"></script>
+	<script>
+		$(document).on('af_complete', function(event, response) {
+			if (response.success) {
+				dataLayer.push({
+					event: 'Lead'
+				});
+				ym(32775105, 'reachGoal', 'lead');
+			}
+		});
+	</script>
+	<!-- BEGIN JIVOSITE CODE {literal} -->
+	<script type="text/javascript">
+		(function() {
+			document.jivositeloaded = 0;
+			var widget_id = 'bHRZDxQpBO';
+			var d = document;
+			var w = window;
+
+			function l() {
+				var s = d.createElement('script');
+				s.type = 'text/javascript';
+				s.async = true;
+				s.src = '//code.jivosite.com/script/widget/' + widget_id;
+				var ss = document.getElementsByTagName('script')[0];
+				ss.parentNode.insertBefore(s, ss);
+			} //эта строка обычная для кода JivoSite
+			function zy() {
+				//удаляем EventListeners
+				if (w.detachEvent) {
+					//поддержка IE8
+					w.detachEvent('onscroll', zy);
+					w.detachEvent('onmousemove', zy);
+					w.detachEvent('ontouchmove', zy);
+					w.detachEvent('onresize', zy);
+				} else {
+					w.removeEventListener('scroll', zy, false);
+					w.removeEventListener('mousemove', zy, false);
+					w.removeEventListener('touchmove', zy, false);
+					w.removeEventListener('resize', zy, false);
+				}
+				//запускаем функцию загрузки JivoSite
+				if (d.readyState == 'complete') {
+					l();
+				} else {
+					if (w.attachEvent) {
+						w.attachEvent('onload', l);
+					} else {
+						w.addEventListener('load', l, false);
+					}
+				}
+				//Устанавливаем куку по которой отличаем первый и второй хит
+				var cookie_date = new Date();
+				cookie_date.setTime(cookie_date.getTime() + 60 * 60 * 28 * 1000); //24 часа для Москвы
+				d.cookie = 'JivoSiteLoaded=1;path=/;expires=' + cookie_date.toGMTString();
+			}
+			if (d.cookie.search('JivoSiteLoaded') < 0) {
+				//проверяем, первый ли это визит на наш сайт, если да, то назначаем EventListeners на события прокрутки, изменения размера окна браузера и скроллинга на ПК и мобильных устройствах, для отложенной загрузке JivoSite.
+				if (w.attachEvent) {
+					// поддержка IE8
+					w.attachEvent('onscroll', zy);
+					w.attachEvent('onmousemove', zy);
+					w.attachEvent('ontouchmove', zy);
+					w.attachEvent('onresize', zy);
+				} else {
+					w.addEventListener('scroll', zy, {
+						capture: false,
+						passive: true
+					});
+					w.addEventListener('mousemove', zy, {
+						capture: false,
+						passive: true
+					});
+					w.addEventListener('touchmove', zy, {
+						capture: false,
+						passive: true
+					});
+					w.addEventListener('resize', zy, {
+						capture: false,
+						passive: true
+					});
+				}
+			} else {
+				zy();
+			}
+		})();
+	</script>
+	<!-- {/literal} END JIVOSITE CODE -->
+</body>
+
+</html>

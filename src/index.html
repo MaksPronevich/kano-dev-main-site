@@ -1,68 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-	@@include('components/head.html', {"title": "Webinar page"})
+<html lang="ru" class="no-js">
+	@@include('components/head.html', {"title": "Main-page"})
 	<body>
-		<div class="wrapper">
-			<section class="promo-webinar">
-				<div class="container">
-					<div class="promo-webinar__wrap">
-						<div class="promo-webinar__content">
-							<h2 class="promo-webinar__title">
-								Бесплатная запись вебинара<br />
-								“Всё о дентальной имплантации”
-							</h2>
-							<p class="promo-webinar__text">Ведущий специалист KANO расскажет вам о всех тонкостях имплантации</p>
-							<button class="button promo-webinar__button">Смотреть</button>
-						</div>
-						<img src="@img/promo-img.png" class="promo-webinar__img" alt="Вебинар" />
-					</div>
-					<div class="promo-webinar__wrap--mob">
-						<img src="@img/promo-img--mob.png" alt="" />
-						<div class="promo-webinar__content--mob">
-							<span class="promo__title">Стоматология KANO. Качество и компетентность.</span>
-							<button class="button promo__button" data-fancybox="" data-src="#consultation-form">Бесплатная консультация</button>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="host-webinar">
-				<div class="container">
-					<h2 class="title host-webinar-title">Ведущий вебинара</h2>
-					<div class="card-webinar">
-						<img src="@img/card-photo.png" class="card-webinar__img" alt="Шелег Владимир Леонидович" />
-						<h3 class="card-webinar__title">Шелег Владимир Леонидович</h3>
-						<p class="card-webinar__text">
-							ведущий имплантолого Беларуси,<br />
-							лектор, автор исследовательской работы по имплантации All-On-4/6
-						</p>
-					</div>
-				</div>
-			</section>
+		@@include('components/chanks/svg.html', {})
+		<div class="wrapper is-mainpage">
+			<!-- <body>
+		<div class="wrapper"></div>
 
-			<section class="questios-webinar">
+		@@include('components/scripts.html', {})
+	</body>
+</html> -->
+
+			[[$uphead]] [[$header]]
+
+			<div id="promo_section"></div>
+
+			[[$services_section]] [[$features_section]] [[$tourism_section]]
+
+			<div id="reviews_section"></div>
+
+			[[$clinics_section]] [[$works_section]] [[$consultation_section]] [[$blog_section]] [[*content:ne=``:then=`
+			<div class="section bordered">
 				<div class="container">
-					<h2 class="title questios-webinar-title">Вопросы которые мы разберем на вебинаре:</h2>
-					<div class="questios-webinar__content">
-						<ul class="questios-webinar__list">
-							<li class="questios-webinar__item">
-								<h4 class="questios-webinar__question">Имплантация - это больно? Как подготовиться к имплантации?</h4>
-							</li>
-							<li class="questios-webinar__item">
-								<h4 class="questios-webinar__question">Какие импланты выбрать, почему такая разница в стоимости?</h4>
-							</li>
-							<li class="questios-webinar__item">
-								<h4 class="questios-webinar__question">Жизнь до и после имплантации - рекомендации по образу жизни?</h4>
-							</li>
-							<li class="questios-webinar__item">
-								<h4 class="questios-webinar__question">Что такое комплексная имплантация? В каких случаях необходима?</h4>
-							</li>
-						</ul>
-						<button class="button promo-webinar__button">Смотреть</button>
+					<div class="row align-justify">
+						<div class="columns small-12 large-8">
+							<div class="output">[[*content]]</div>
+						</div>
+						<div class="columns small-12 large-3">
+							<div class="note">
+								<span class="note__title">[[*title_right]]</span>
+								<p class="note__message">[[*text_right]]</p>
+								<div class="note__holder">
+									<a href="[[~[[%113:babelid]]]]" target="_blank" class="note__icon"><img class="lozad" data-src="assets/svg/iso.svg" alt="" /></a>
+									<a href="[[~[[%748:babelid]]]]" target="_blank" class="note__icon"
+										><img class="lozad" data-src="assets/img/numberone.png" alt=""
+									/></a>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</section>
+			</div>
+			`]] [[$footer]]
 		</div>
 
-		<script src="js/index.js"></script>
+		[[$modals]]
+
+		<script>
+			setTimeout(() => {
+				fetch('[[~965]]')
+					.then(response => {
+						return response.text();
+					})
+					.then(data => {
+						$('#promo_section').html(data);
+						$('.js-promo').slick({
+							infinite: true,
+							dots: true,
+							arrows: true,
+							slidesToShow: 1,
+							slidesToScroll: 1,
+							fade: true,
+							appendArrows: '.promo__arrows',
+							appendDots: '.promo__dots',
+							responsive: [
+								{
+									breakpoint: 1340,
+									settings: {
+										arrows: false,
+									},
+								},
+							],
+						});
+					})
+					.catch(err => console.log(err));
+
+				fetch('[[~966]]')
+					.then(response => {
+						return response.text();
+					})
+					.then(data => {
+						$('#reviews_section').html(data);
+						$('.js-carousel').slick({
+							infinite: false,
+							dots: false,
+							arrows: true,
+							slidesToShow: 4,
+							slidesToScroll: 4,
+							responsive: [
+								{
+									breakpoint: 999,
+									settings: {
+										slidesToShow: 1,
+										slidesToScroll: 1,
+										variableWidth: true,
+										infinite: false,
+										arrows: false,
+									},
+								},
+							],
+						});
+						$('.blockquotes__item').on('click', function (e) {
+							$(this).addClass('current').siblings('.blockquotes__item').removeClass('current');
+							$('.blockquotes__message').eq($(this).index()).fadeIn().siblings('.blockquotes__message').hide();
+						});
+					});
+			}, 0);
+		</script>
+
+		[[$js]]
 	</body>
 </html>

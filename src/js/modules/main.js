@@ -1,6 +1,3 @@
-import $ from 'jquery';
-import lozad from 'lozad';
-
 // $(document).foundation();
 
 $(document).ready(function () {
